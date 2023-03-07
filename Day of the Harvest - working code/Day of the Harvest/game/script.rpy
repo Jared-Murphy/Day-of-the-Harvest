@@ -613,18 +613,19 @@ label start:
     #cog story
     label cog_story:
  
-        e " You stare blankly at the screen as it buzzes. Red, green, blue, all the colors in the world. Your boss is behind you, a towering figure of intricate metal spindles 
-        and spikes that reaches towards heaven with every motion. "
-        e"The stretched steel skeleton wears a beautiful cashmere suit, it's simply gorgeous. Your suit didn't cost shit. 
-        the boss speaks in a chourus of whispers, a dozen voices of business prowess."
-        e" The numbers, whelp, how are the numbers?"
-        e "You try not to look at the spinning metal form of the boss or his cashmere suit worth more than your car."
-        e "The screen shows a rising and falling set of stocks, many colors of potential profit that fluctuate up and down like a heartbeat.
-        The beating heart of the world, the transaction of value. But you are no exec, the numbers don't make sense."
-        e "You choke on your words."
-        "Well, whelp, how are the numbers?"
-        woman "“I can’t do this anymore…” The woman begins to sob."
-        
+        e " You are [Name], a clerical worker in the insurance branch of the MDAS Corporation, one of the world’s leading supercompanies. "
+        e " Four years ago, you passed college with mediocre grades and a mountain of debt, but fortunately managed to secure this job."
+        e " Since then, things have not been easy, but then again, nothing in life is supposed to be easy. Your parents raised a hard worker… most of the time. "
+        e " It’s currently Wednesday morning. You sit in a seemingly endless room lined wall-to-wall with near-identical gray cubicles. "
+        e " You answer emails, take calls from disgruntled customers, and write reports. "
+        e " One call, an exhausted-sounding woman sounds like she’s trying to hold back tears. "
+        e " Phone: “What do you mean it’s denied? I was supposed to be able to…” "
+        e " Narrator: You cut her off with a response from your checklist. "
+        e " Player: “We’re terribly sorry, ma’am, there’s nothing that can be done. Perhaps a different package will better suit your needs.” "
+        e " Phone: “I don’t have the money for a different insurance package. The contract said-” "
+        e " Player: “We’re sorry, but the contract explicitly stated that the terms were subject to change. It’s unfortunate that you-” "
+        Phone " “I can’t do this anymore…” The woman begins to sob. "
+
         menu:
                 "Give her a refund.":
                     $ refund = True
@@ -632,18 +633,65 @@ label start:
                 "Follow the system.":
                     $ system = True
 
-        if phone_call:
-            #put text for phone call True 
-            "block text for test"
+        if refund:
+        #For if you provide a refund to the woman
+           e "Narrator: You sigh, then check behind you. No sign of the floor manager roaming between the cubicles. "
+           e " Player: “Listen, I can offer a partial refund. I’m really sorry, 50% is the best I can do.” "
+           e " Narrator: The woman’s voice is still close to crying, but you can tell that she will settle for this. "
+           e " Phone: “Thank you… thank you so-” "
+           e " Narrator: You hear a distant sound of metal dragging across metal and snap back into your corporate voice. "
+           e " Player: “No problem, Ma’am. Now if you could just give me your ID number so I can handle that…” "
+           e " Narrator: You finish up her call without issue. "
+
 
         
         if system: 
-            #put text for if system is true 
-            "block text for test"
+        #put text for if system is true 
+           e "Narrator: You clench your jaw. This is the worst part of the job, always is. But it has to be done."
+           e " Player: “I’m…. terribly sorry. Perhaps I can redirect you to someone who-” "
+           e " Narrator: The woman hangs up. You sigh deeply. "
 
 
-        #continue text here
-
+        #main story continues
+        e " The next few hours are more manageable. "
+        e " People get angry with you and there’s always more emails to check and forms to stamp or sign, but that’s normal. "
+        e " Lunch break finally comes. You sigh with relief before standing and walking with the horde of co-workers to the lunchroom. "
+        e " You’re standing in one of the dozens of lines in front of the company-owned vending machines when Craig, your co-worker, approaches you. "
+        e " Technically, Craig is your superior, but he’s always been nice to you. "
+        e " Craig: “Hey, [Name]! Listen, I was talking to some of the managers about what happened with Frank. "
+        e " We thought it would be good if everyone donated a dollar or two to a fund to buy something for Frank’s widow. "
+        e " You know, something from all of us to help her out.” "
+        e " Narrator: Frank had collapsed in his cubicle with a heart attack last week. "
+        e " He had worked here much longer than you, but he was around 8 cubicles away, so you didn’t know him too well. "
+        e " You heard that the people in the cubicles next to them had heard him groaning a few hours before lunch. "
+        e " But nobody got up to check on him until the break started. "
+        e " You wonder if you had a heart attack, would your co-workers check on you? "
+        e " How long did Frank struggle for breath while nobody came to help? "
+        e " Craig’s voice pulls you back to reality. "
+        e " Craig: “[Name]? You good?” "
+        e " Player: “Oh! Yeah, sorry. Sure, I can give a dollar.” "
+        e " Narrator: Craig smiles as he puts the dollar into the shoebox. "
+        e " Craig: “Thanks, [Name]. Hey, are we still on for Friday?” "
+        e " Player: “Oh yeah, of course.” "
+        e " Narrator: You, Craig, and a bunch of the other clerical workers are planning on going out drinking on Friday, two days from now. "
+        e " After all, morale is usually pretty low and prices drop the day after the Harvest. "
+        e " Oh, right. "
+        e " Tomorrow is the Day of the Harvest. "
+        e " You try not to think about it as you eat your protein bar, dry salad, and cookies. "
+        e " Soon enough, you return to work. "
+        e " … "
+        e " After about another hour of work, you begin to hear the sound of metal dragging on metal in the distance. "
+        e " Please don’t stop here. "
+        e " You cringe as you hear the metallic screeching get louder, but under it you hear the sound of sleek shoes tapping on the ground. "
+        e " All around you, the normal muffled sounds of your co-workers on calls fall silent. "
+        e " The Floor Manager is here. "
+        e " FM: “Zhang.” "
+        e " Narrator: You swivel your chair around and try your best to smile. "
+        e " Player: “H-hello, Sir!” "
+        e " Narrator: The Floor Manager speaks to you in a voice that could never issue from a human mouth. "
+        e " It’s a sound that’s one part the rasp of a file on bone, one part grinding metal, and one part a distant scream. "
+        
+        
         if phone_call:
             #put text for phone call True 
             "block text for test"
@@ -675,63 +723,6 @@ label start:
 
 
         #text continues here 
-
-
-
-
-
-    label sacrafice_block_path:
-        e "The line is red. Going down. You try to control your breathing. The only thing worse than bad numbers is being caught lying. Bad, sir."
-        e "The exec screeches, a sound like knives being dragged across metal. Your ears are still ringing as he grips your shoulders and drags you away from your cubicle."
-        e "Not good, not good, whelp! We need those numbers back up! You are reassigned. It's an important day."
-
-        e "The boss loads you to a van with blacked out windows. You climb You are told to remove your suit and tie - you don't want them getting stained more than they already are. You put on some sunglasses - official uniform."
-        e "You put in your earplugs - once the Harvest begins in earnest, the engine will deafen you without protection. Finally, you put on a pair of disposable gloves - official policy." 
-        e "You step out into the haze at the pit. The Harvest is about to begin. At least you didn't have to round them up."
-
-        e "You march to the edge of the pit. A woman dressed like you marches a dirty man over to you. He's covered in holes from body mods - remnants of jobs that didn't pan out."
-        e "You absently rub the port at the base of your skull - then remember why you are here. A buzz rings over the sound of the engine of progress's thudding heartbeat - the signal to begin."
-        e "You stare at the knife in your hand, then down at the filthy waste of space whose head is now sitting over the edge of the pit. You kneel down and put the blade to his throat."
-
-        e "The market is thirsty"
-        
-        e "Begin the harvest."
-
-        e "You swipe the knife across the man's throat like a card through a reader. Just a swipe, purposeful and smooth. He deserves that much, at least. He gurgles as he chokes on his last breath as it bubbles past the flow of blood."
-        e "You keep your knee on his back, but he doesn't struggle. A minute passes before he's empty. A co-worker you can't remember the name of comes over to collect the drained body and drag it to the furnace chute. The engine grows louder. At least this will improve the numbers."
-
-        e "Another victim is pushed down to the chopping block. This one is crying, she is begging for a chance to pay her rent, she has the money, she swears. She takes another minute to drain."
-        e "Just let it happen, there's no point in fighting this. If nobody is sacrificed, the economy would suffer. If the economy suffers, everyone suffers. "
-        e "If a few have to have an unpleasant death for you and everyone you know to go to bed with a full belly and a roof over your head, then so be it."
-        e "You are sorry for the first few. But they blur together."
-        e "By the end of the Harvest, your eyes are glazed over and your hands shake. The gloves are filled with sweat."
-        e "The engine screams its approval and belches its delight into the sky with clouds of red and black."
-        e "You stumble back to the van. You get the rest of the day off."
-
-        jump the_end
-
-
-    label chopping_block_path:
-        e "The line goes up. Green. You cough out Good! they are good. P-profit! The boss's many needle teeth clink in his vast mouth. From the upper jaw all the way down to the collar of his suit is a series of fused needles and metal thorns that tap together one after another."
-        e "Tip-tap, over and over. Click-clack, so much noise. 
-        Glad to hear it, worm. Keep working."
-        e "He slaps your back, tearing your cheap garbage suit and ripping into your soft human skin. You whimper, but don't say anything." 
-        e "This suit isn't worth it. Besides, complaining about pain to an exec means nothing now that they have escaped the feeble state of humanity."
-        e "The exec buzzes and clicks. You hear the tap of crisp shoes on the ground as he walks away, but you know that he is still watching you with one of his eyes. Even once he leaves your cubicle, he is watching you. Always."
-
-        e "A few hours of feverish work pass before the intercom buzzes over the clacking of dozens of keyboards. 
-        ATTENTION LOYAL WORKERS. THE DAY OF THE HARVEST IS HERE. TURN YOUR ATTENTION TO YOUR SCREENS FOR THIS IMPORTANT MOMENT."
-        e "Your eyes unfocus as the wall of numbers is replaced by a grainy view of a massive pit. You've seen this so many times, can't you just skip it? You have a lot of work to do and this is the same every time."
-        e "The pit grows darker and darker as it gets deeper, stained by generations of blood pooling and drying. Rings of filthy people are lined up around the edge of the pit, their heads over the lip."
-        e "Behind each sacrifice, a man or woman in a simple collared shirt."
-
-
-        e "The Harvest finally begins"
-
-        e "Each sacrifice's throat is carved open and allowed to drain into the gaping maw. At its center beats the heart of the market, the engine of industry greedily lapping up its offering."
-        e" The empty bodies are tossed into a chute added to its furnace. The machine roars louder and louder, eventually rendering the audio of the broadcast silent to prevent damage to the speakers."
-        e "The display continues for minutes. Maybe hours. It's much less nauseating after so many harvests. It's hard to watch, but without a little grease for the gears, how can the market thrive?"
-        e " Finally, the broadcast ends. The numbers are definitely good now. Nothing like a little bit of blood to really breathe some life into the economy. You keep working. There's a lot more to do today."
 
         jump the_end
 
