@@ -61,27 +61,27 @@ label start:
     image wasteFemDead = im.Scale("wasteFemDead.png",1000,1000)
     image wasteFemNeutral = im.Scale("wasteFemNeutral.png",1000,1000)
     image wasteMaleDead = im.Scale("wasteMaleDead.png",1000,1000)
-    image cogFemHarvestBloody = im.Scale("cogFemHarvestBloody.png",1000,1000)
-    image cogFemHarvestClean = im.Scale("cogFemHarvestClean.png",1000,1000)
-    image cogFemNervous = im.Scale("cogFemNervous.png",1000,1000)
-    image cogFemNeutral = im.Scale("cogFemNeutral.png",1000,1000)
-    image cogFemSmile = im.Scale("cogFemSmile.png",1000,1000)
-    image cogMaleHarvestBloody = im.Scale("cogMaleHarvestBloody.png",1000,1000)
-    image cogMaleHarvestClean = im.Scale("cogMaleHarvestClean.png",1000,1000)
-    image cogMaleNervous = im.Scale("cogMaleNervous.png",1000,1000)
-    image cogMaleSmile = im.Scale("cogMaleSmile.png",1000,1000)
-    image costFemBigSmile = im.Scale("costFemBigSmile.png",1000,1000)
-    image costFemNervous = im.Scale("costFemNervous.png",1000,1000)
-    image costFemNeutral = im.Scale("costFemNeutral.png",1000,1000)
-    image costFemSmile = im.Scale("costFemSmile.png",1000,1000)
-    image costMaleBigSmile = im.Scale("costMaleBigSmile.png",1000,1000)
-    image costMaleNervous = im.Scale("costMaleNervous.png",1000,1000)
-    image costMaleSmile = im.Scale("costMaleSmile.png",1000,1000)
-    image craigTurn = im.Scale("craigTurn.png",1000,1000)
-    image driver = im.Scale("driver.png",1000,1000)
-    image homelessWoman = im.Scale("homelessWoman.png",1000,1000)
-    image skittles = im.Scale("skittles.png",1000,1000)
-    image wife = im.Scale("wife.png",1000,1000)
+    image cogFemHarvestBloody = im.Scale("cogFemHarvestBloody",1000,1000)
+    image cogFemHarvestClean = im.Scale("cogFemHarvestClean",1000,1000)
+    image cogFemNervous = im.Scale("cogFemNervous",1000,1000)
+    image cogFemNeutral = im.Scale("cogFemNeutral",1000,1000)
+    image cogFemSmile = im.Scale("cogFemSmile",1000,1000)
+    image cogMaleHarvestBloody = im.Scale("cogMaleHarvestBloody",1000,1000)
+    image cogMaleHarvestClean = im.Scale("cogMaleHarvestClean",1000,1000)
+    image cogMaleNervous = im.Scale("cogMaleNervous",1000,1000)
+    image cogMaleSmile = im.Scale("cogMaleSmile",1000,1000)
+    image costFemBigSmile = im.Scale("costFemBigSmile",1000,1000)
+    image costFemNervous = im.Scale("costFemNervous",1000,1000)
+    image costFemNeutral = im.Scale("costFemNeutral",1000,1000)
+    image costFemSmile = im.Scale("costFemSmile",1000,1000)
+    image costMaleBigSmile = im.Scale("costMaleBigSmile",1000,1000)
+    image costMaleNervous = im.Scale("costMaleNervous",1000,1000)
+    image costMaleSmile = im.Scale("costMaleSmile",1000,1000)
+    image craigTurn = im.Scale("craigTurn",1000,1000)
+    image driver = im.Scale("driver",1000,1000)
+    image homelessWoman = im.Scale("homelessWoman",1000,1000)
+    image skittles = im.Scale("skittles",1000,1000)
+    image wife = im.Scale("wife",1000,1000)
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -547,11 +547,7 @@ label start:
         n "…that is until you see her."
     
         #Adjust scene by adding homeless woman asset, ideally looking different or at least with different clothes compared to the normal homeless woman asset
-        show waste with dissolve:
-            xalign -.2
-        show homelessWoman with dissolve:
-            xalign 1.3
-            yalign 0.5
+        show waste
     
         n "Another homeless and unemployed just like you. Unlike the others of today though, she stares back. You pause to look her over."
     
@@ -741,6 +737,7 @@ label start:
         n "It’s currently Wednesday morning. You sit in a seemingly endless room lined wall-to-wall with near-identical gray cubicles. "
         n "You answer emails, take calls from disgruntled customers, and write reports."
     
+    # Neutral expression character
         n "One call, an exhausted-sounding woman sounds like she’s trying to hold back tears."
         Phone "“What do you mean it’s denied? I was supposed to be able to…”"
         n "You cut her off with a response from your checklist. "
@@ -762,12 +759,14 @@ label start:
         if refund:
         #put text for refund True
             n "You sigh, then check behind you. No sign of the floor manager roaming between the cubicles."
+        # nervous expression 
             n "“Listen, I can offer a partial refund. I’m really sorry, 50 percent is the best I can do.”"
             n "The woman’s voice is still close to crying, but you can tell that she will settle for this."
             Phone "“Thank you… thank you so-”"
             n "You hear a distant sound of metal dragging across metal and snap back into your corporate voice. "
             n "“No problem, Ma’am. Now if you could just give me your ID number so I can handle that…”"
             n "You finish up her call without issue."
+        # return to neutral expression
 
         if system:
             #put text for if system is true
@@ -781,28 +780,34 @@ label start:
         n "Lunch break finally comes. You sigh with relief before standing and walking with the horde of co-workers to the lunchroom."
         n "You’re standing in one of the dozens of lines in front of the company-owned vending machines when Craig, your co-worker, approaches you. "
         n "Technically, Craig is your superior, but he’s always been nice to you."
+    #use craig character
         Craig "“Hey, ! Listen, I was talking to some of the guys about Frank earlier."
         Craig "We thought it would be good if everyone donated a dollar or two to a fund to buy something for Frank’s widow."
         Craig "You know, something from all of us to help her out.”"
         n "Frank had collapsed in his cubicle with a heart attack last week."
         n "He had worked here much longer than you, but he was around 8 cubicles away, so you didn’t know him too well."
+    #fade to nervous expression
         n "You heard that the people in the cubicles next to them had heard him groaning a few hours before lunch, but nobody got up to check on him until the break started."
         n "You wonder if you had a heart attack, would your co-workers check on you?"
         n "How long did Frank struggle for breath while nobody came to help?"
         n "Craig’s voice pulls you back to reality."
         Craig " %(player_name)s? You good?"
+    # Switch to smile
         n "“Oh! Yeah, sorry. Sure, I can give a dollar.”"
         n "Craig smiles as he puts the dollar into the shoebox."
         Craig "“Thanks, %(player_name)s. Hey, are we still on for Friday?”"
         n "“Oh yeah, of course.”"
         n "You, Craig, and a bunch of the other clerical workers are planning on going out drinking on Friday, two days from now. "
         n "After all, morale is usually pretty low and prices drop the day after the Harvest."
+    #fade to neutral expression
         n "Oh, right."
         n "Tomorrow is the Day of the Harvest."
         n "You try not to think about it as you eat your protein bar, dry salad, and cookies."
         n "Soon enough, you return to work."
+    #remove craig from scene
         n "…"
         n "After about another hour of work, you begin to hear the sound of metal dragging on metal in the distance."
+    # change to nervous expression
         n "Please don’t stop here."
         n "You cringe as you hear the metallic screeching get louder, but under it you hear the sound of sleek shoes tapping on the ground."
         n "All around you, the normal muffled sounds of your co-workers on calls fall silent."
@@ -813,6 +818,7 @@ label start:
         show ceo with dissolve:
             xalign 1.3
             yalign 0.5
+    #note: use FLOOR MANAGER not CEO
         n "You swivel your chair around and try your best to smile."
         n "“H-hello, Sir!”"
         n "The Floor Manager speaks to you in a voice that could never issue from a human mouth. "
@@ -878,6 +884,7 @@ label start:
         n "You struggle to catch your breath."
         n "You had signed up to help with the Harvest tomorrow as a last resort."
         n "Rent was going up, and even though you were scheduled for a 20 cent per hour raise by the end of the quarter, you needed a little extra cash to make it until then."
+    # fade to neutral expression
         n "The rest of the work day is uneventful."
         scene bg streets
         with fade
@@ -890,6 +897,7 @@ label start:
         show waste with dissolve: 
             xalign 1.3
         Waste "“Hey, MAN/MISS, can you spare some change?”"
+    #nervous expression
         n "You avoid making eye contact. If they don’t have money today, it’s already far too late for them. Charity handouts won’t help them."
         Waste "“Anything helps. I just want to be off the streets tomorrow, you know?”"
         n "One is following you. You speed up, trying to avoid letting him touch you."
@@ -907,6 +915,7 @@ label start:
         n "Cramped in some rooms and with some drafty windows, but it’s close to the subway and in a safe area."
         Skittles "“Mrow!”"
         n "Your cat, Skittles, scampers up to you."
+    #switch to smile expression
         n "“Hey, girl! Sorry, work went rough tonight.”"
         Skittles "(purring)"
         n "“Oh, you want fresh food, huh?”"
@@ -925,11 +934,13 @@ label start:
         n "They are dressed in black masks that cover their mouths and nose, sunglasses, disposable gloves, and long kitchen aprons."
         n "Their sleeves are rolled up. As you climb in, one hands you your uniform."
         n "You put it on wordlessly. Aside from the rumbling of the van as it accelerates, all is silent."
+    #change to harvest costume for character
         n "The Harvest has begun."
         n "Most of the sacrifices are already accounted for. It’s a weeks-long process to round them up from the surrounding area and transport them to the city."
         n "But even so, part of the job is making sure that any undesirables on the streets are taken care of."
         n "It’s all for the bonus, you think to yourself. Somebody has to do it."
         n "It’s starting to get bright outside despite the endless haze of smog that always covers the sky."
+    #driver asset shows up
         n "Driver “On the left. One sacrifice.”"
         n "You look out and see the same homeless man from last night limping down the empty street, glancing at the van in fear."
         n "What the hell is he doing outside today? He should have-"
@@ -1019,6 +1030,7 @@ label start:
         n "You glide the blade through his throat, letting his blood spill onto the edge of the pit."
         n "It joins the indistinguishable tide of blood coating the walls of the pit from hundreds already Harvested."
         n "You wait a while for her to drain before gesturing for the other person at the front to drag the body off for disposal."
+    #(if possible) slow fade from normal to bloody version of character. Stays bloody for the rest of the story.
         n "The next woman is nowhere near as dirty as the others. Perhaps she wasn’t homeless, but rent was due and she couldn’t pay."
         n "It doesn’t matter why you’re low on money when the Harvest begins, it only matters that anyone dragging down the economy must be dealt with."
         n "The Engine must have fuel. Without it, we would have nothing."
