@@ -363,9 +363,9 @@ label start:
 
         if score_counter <= 0:
             jump waste_story
-        if score_counter <= 8:
+        if score_counter <= 6:
             jump cog_story
-        if score_counter < 17:
+        if score_counter < 15:
             jump business_story
         if score_counter >= 16 and persistent.gameDone:
             jump ceo_story
